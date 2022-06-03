@@ -1,0 +1,44 @@
+//(function (){ > later of protection IIFE
+
+
+//function kat(){ << no parameter
+    //alert("fgdfgfd");
+//}
+// to call function >>>>>    kat();
+
+// more advice function to allow more arguments.
+//function sumNums(x, y) {    // x, y are parameters
+    //return x, y;
+//}
+// calling a function with arguments with two pieces of information to get something in return. reusable.
+// no need to repeat. Instead we call our function multiple times to run the instructions in the body
+//console.log(10,5));
+//console.log(x: 100, y:5));
+
+
+// Anonymous function - they are still set up rather similarly lack the na,e/identifier function expression vs a function declaration
+//let honkHorn = function() {
+//alert( "Beep beep!");
+//}
+
+//Hoisting  - who that
+//function hoistFunction()
+//alert("help I have been hoisted! where am I? I think I ended up at the top of the code :0")
+//^^^^^^ READ MORE
+//let globalVar = "Hi! I am globally scoped ^_^";
+//function sayHi(){
+  //  alert(globalVar);
+//}
+//sayHi();
+
+
+function scopeComparison(){
+    //let localVar = "Look, I am local guy")
+    //let(globalVar);
+//}
+// call the function
+//scopeComparison();
+/// cannot call for alert(localVar)
+
+//more about scope
+//})(); >> layer of protection
