@@ -22,16 +22,16 @@
  * console.logging the function's return value
  */
 // let colorP = prompt("Pick a random color");
-// function analyzeColor() {
-//     if (colorP === "blue") {
-//         alert(" Blue as the color of the sky. Nice!");
+//  function analyzeColor() {
+//   if (colorP === "blue") {
+//     alert(" Blue as the color of the sky. Nice!");
 //     } else if (colorP === "red") {
 //         alert(" Strawberries are red! , delicious!");
 //     } else
 //     alert(" I do not know anything about " + colorP);
 //     console.log(randomColor);
 // }
-// analyzeColor();
+//analyzeColor();
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -51,12 +51,21 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-let colorP = ("Pick a color");
-switch (colorP){
-    case " Pick a color":
-        alert ("awesome! " + colorP " is the color of");
-}
 
+// let colorP = prompt("Pick a color");
+// switch(colorP){
+//     case "blue":
+//         alert("awesome! blue is the color of the sky");
+//         break;
+//         case "red":
+//         alert("really! " + colorP + " is the color of strawberries");
+//         break;
+//     case "green":
+//         alert("No way! I love green!!");
+//         break;
+//     default:
+//         alert(" I do not know anything about that color")
+// }
 
 /**
  * TODO:
@@ -64,6 +73,8 @@ switch (colorP){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+
 
 /* ########################################################################## */
 
@@ -86,7 +97,48 @@ switch (colorP){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+// let luckyNumber = Math.floor(Math.random() * 6);
+// let totalA = 100;
+// let discount;
+// switch (luckyNumber){
+//        case 0:
+//        discount = 0;
+//           alert ("Boo!! your lucky number was 0, so your discount is " + (discount * 100) + " sorry!");
+            // totalA = totalA - (totalA * 0 );
+            // alert("Your total is $" + totalA);
+           // break;
+    // case 1:
+    //        discount = .1;
+    //        alert("Your lucky number was 1, so your discount is " + (discount * 100) + "%");
+    //        console.log(discount);
+    //        totalA = totalA - (totalA * .1);
+    //        alert("your new total is $" + totalA + " VS the previous total of $100" );
+    //        break;
 
+    // case 2:
+    //        discount = .25;
+    //        alert("Your lucky number was 2, so your discount is " + ( discount * 100) + "% come back again!");
+    //        totalA = totalA - (totalA * .25);
+    //        alert("Your new total is $" + totalA + " your initial total was 100");
+    //        break;
+    // case 3:
+    //     discount = .35;
+    //     alert  ("Your discount is " + (discount * 100) + "% come back again!");
+    //     totalA = totalA - (totalA * .35);
+    //     alert("Your new total is $" + totalA + " VS. the previous total of $100");
+    //     break;
+    // case 4:
+    // discount = .50;
+    //     alert("Your lucky number was 4, so your discount is " + (discount * 100) + "%");
+    // totalA = totalA - (totalA * .50);
+    // alert("Today is your lucky day, your new total is $" + totalA + " VS the previous amount of $100");
+    // break;
+    // default:
+    //     alert( "Your lucky number was 5. You just won the best discount!! congrats everything is free");
+    // /break;
+// }
+//
+//calculatedTotal(luckyNumber,100);
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -96,7 +148,8 @@ switch (colorP){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+//var luckyNumber = Math.floor(Math.random() * 6);
+
 
 /**
  * TODO:
@@ -116,3 +169,9 @@ switch (colorP){
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let askUser = (userResponse)
+function userResponse (){
+askUser = confirm( "Would you like to enter a number?");
+//prompt("Type a number");
+}
+userResponse();
