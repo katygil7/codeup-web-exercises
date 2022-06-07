@@ -38,7 +38,17 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
+    function analyzeColor(color){
+        let message = "";
+        if (colo === "red"){
+            message = "Red is a common color strawberries"
+        } else if (color === "orange"){
+            message
+        } else if ()
+        return "message"
+
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+}
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
@@ -74,7 +84,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-
+prompt( "")
 
 /* ########################################################################## */
 
@@ -148,7 +158,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-//var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 
 
 /**
@@ -169,9 +179,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let askUser = (userResponse)
-function userResponse (){
-askUser = confirm( "Would you like to enter a number?");
-//prompt("Type a number");
+let userStart = confirm("would you like to enter a number");
+if (userStart){
+    let userNum = prompt("Okay! give me the number")
 }
-userResponse();
