@@ -5,7 +5,7 @@ function output(){
         i = i * 2
         console.log(i);
     }
-}
+} output();
 //---------------------
 
 let  allCones = Math.floor(Math.random() * 50) + 50;
