@@ -42,3 +42,15 @@ function scopeComparison(){
 
 //more about scope
 //})(); >> layer of protection
+
+FOR LOOPS (multiplication table exercise)
+function showMultipliscationTable (num){
+for (let i = 1; i <= 10; i++){
+console.log(num + "X" + i + "="+ (num * i))
+}
+//-------------------------------------
+PYRAMID with repeat <<<<<<<<<<<<<
+for ( let i =1  ; i <= 9; i++){
+let iAsString = i.string();
+console.log(iAsString.repeat(i));
+}

@@ -1,4 +1,4 @@
-//Math.floor(Math.random() * 10) + 1;
+Math.floor(Math.random() * 10) + 1;
 
 
 function showMultiplicationTable(x){
@@ -10,9 +10,10 @@ console.log(x + "*" + i + "=" + (7 * i));
 }
 showMultiplicationTable(7);
 
-
+//--------------------------------------------------
 
 console.log();
+
 
 for ( var i = 0; i < 10; i++){
     let o = Math.floor((Math.random() * 180)+20);
@@ -20,9 +21,13 @@ for ( var i = 0; i < 10; i++){
         console.log( o + " even");
     }
     else {
- //       console.log (o + " odd");
+       console.log (o + " odd");
     }
 }
+
+//--------------------------------------------
+
+
 
 function increase (num){
 for (let i = 1; i < 10; i++){
@@ -33,12 +38,12 @@ for (let i = 1; i < 10; i++){
     console.log(count.join(""));
     }
 }
+//----------------------------------------------
 
-
-for ( i = 100; i > 0; i  = i - 5){
+for ( let i = 100; i > 0; i  = i - 5){
 console.log(i);
-
 }
+//------------------------------------------------
 
 
 

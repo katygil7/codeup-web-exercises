@@ -3,7 +3,7 @@ let x = prompt("Enter an odd number between 1 and 50.")
 
 while (x % 2 === 0) {
     x = prompt("Enter an odd number between 1 and 50.")
-    if (x % 2 !== 0) {
+    if (x % 2 !== 0 && x >= 1 && x <= 50){
         break;
     }
 }for (var i = 1; i < 50; i+=2) {
