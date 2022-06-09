@@ -58,16 +58,16 @@ names.forEach(function (name){
      */
 
     function first(nameOne) {
-        console.log(nameOne[0]);
+        console.log( " hey this  is you name " + nameOne[0]);
     }
 first(names);
 
     function second(nameSecond){
-        console.log(nameSecond[1]);
+        console.log( " hey this  is you name " + nameSecond[1]);
     }
 second(names);
     function last(nameThird){
-        console.log(nameThird[nameThird.length - 1]);
+        console.log( " hey this  is you name " + nameThird[nameThird.length - 1]);
         console.log(nameThird.length);
     }
 last(names);
