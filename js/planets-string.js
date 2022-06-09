@@ -24,7 +24,7 @@
      * string, and <li> tags around each planet.
      */
 
-    let brPlanets = planetsArray.join("<br/>");
+    let brPlanets = planetsArray.join("<br>");
     console.log(brPlanets);
 
     //let unOrderedPlanets = <ul planetsArray></ul>
