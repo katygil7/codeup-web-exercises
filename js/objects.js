@@ -79,16 +79,21 @@
      */
 
     let books = [
-        {}
-    ]
+        {title: "Twilight" , Author: {firstN: "Stephene", lastN: "Meyer"}},
+        {title: "Narnia" , Author: {firstN: "C.S", lastN: "Lewis"}},
+        {title: "Harry Potter" , Author: {firstN: "J.K", lastN: "Rowling"}},
+        {title: "Outsider" , Author: {firstN: "Stephen", lastN: "King"}},
+        {title: "Rich Dad Poor Dad" , Author: {firstN: "Robert", lastN: "Kiyosaki"}}
 
+    ];
 
+    console.log(books[4].Author.lastN)
 
     /**
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
-     * - the book number (use the index of the book in the array)
+     * - thee book number (us the index of the book in the array)
      * - the book title
      * - author's full name (first name + last name)
      *
@@ -108,6 +113,12 @@
      *      ---
      *      ...
      */
+    books.forEach(function (item,index){
+        console.log("book #" + (index + 1) + "\n" + "Title: " + item.title + "\n" + "Author: " + item.Author.firstN + " " + item.Author.lastN)
+
+    })
+
+
 
     /**
      * Bonus:
