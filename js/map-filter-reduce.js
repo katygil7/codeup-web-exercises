@@ -38,8 +38,14 @@ const users = [
 ];
 
 let userLanguages = users.filter(function (user){
-    return (user.languages.length >= 3);
+    //Long way
+    //if(user.language.length>=3){
+    //return true;
+    //else{
+    //return false;
 
+    return (user.languages.length >= 3);
+// short way ^^^^^^^^^^^^^^
 });
 console.log(userLanguages);
 
@@ -57,8 +63,25 @@ let averageYears = sumOfExperience/users.length;
 console.log(averageYears);
 
 let userLongEmail = users.reduce(function (longestEmail,user){
-    if(longestEmail.length > user.email.length){
+    if(user.email.length > longestEmail.length){
+        return user.email;
+    }else{
         return longestEmail;
     }
-} ," ");
+} ,"");
 console.log(userLongEmail);
+
+let listOfNames = users.reduce(function (allNames,user){
+    return (allNames + user.name + ", ");
+} ,[]);
+
+console.log(listOfNames);
+
+// let uniqueLanguages = users.reduce(function (setOfuniqueLanguagesSoFar,user) {
+//     for (let language of user.languages) {
+//         setOfuniqueLanguagesSoFar.add(language)
+//     }
+//     return setOfuniqueLanguagesSoFar;
+// }  , new set());
+// console.log(uniqueLanguages);
+// });
