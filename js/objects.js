@@ -31,8 +31,10 @@
      */
     person.sayHello = function (){
      console.log ("Hello from " + person.firstName + " " + person.lastName + "!");
-
-    //console.log (`Hello from ${person.firstName} ${person.lastName}!`);
+    //Another way
+     //console.log (`Hello from
+        // ${person.firstName}
+        // ${person.lastName}`);
 }
     person.sayHello();
 
@@ -67,6 +69,19 @@
          }
 
      });
+
+     // with For loop
+    // for (let i = 0; i < shoppers.length; i++) {
+    //     const shopper = shoppers[i];
+    //     let outputString = `${shopper.name} ${shopper.amount}`;
+    //     if (shopper.amount > 200){
+    //         let discount = shopper.amount * .12;
+    //         let afterDiscountAmount = shopper.amount - discount;
+    //         outputString += ` ${discount} ${afterDiscountAmount}`;
+    //     }
+    //
+    // }
+   // console.log(outputString);
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -115,11 +130,17 @@
      *      ---
      *      ...
      */
-    books.forEach(function (item,index){
-        console.log("book #" + (index + 1) + "\n" + "Title: " + item.title + "\n" + "Author: " + item.Author.firstN + " " + item.Author.lastN)
+    books.forEach(function (shopper,index){
+
+        console.log("book #" + (index + 1) + "\n" + "Title: " + shopper.title + "\n" + "Author: " + shopper.Author.firstN + " " + shopper.Author.lastN)
 
     })
-
+    // for (let i = 0; i < books.length; i++) {
+    //     let book = books[i];
+    //     let outputString = `Book # ${i + 1}
+    //     title : ${book.title}
+    //     Author: ${book.Author.firstN} ${book.Author.lastN}`
+    // }
 
 
     /**
