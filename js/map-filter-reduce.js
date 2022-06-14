@@ -77,11 +77,3 @@ let listOfNames = users.reduce(function (allNames,user){
 
 console.log(listOfNames);
 
-// let uniqueLanguages = users.reduce(function (setOfuniqueLanguagesSoFar,user) {
-//     for (let language of user.languages) {
-//         setOfuniqueLanguagesSoFar.add(language)
-//     }
-//     return setOfuniqueLanguagesSoFar;
-// }  , new set());
-// console.log(uniqueLanguages);
-// });
