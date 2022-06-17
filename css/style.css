@@ -2,3 +2,45 @@
 /*    color: purple;*/
 /*    text-decoration: underline;*/
 /*}*/
+h1 {
+    text-align: center;
+    color:saddlebrown;
+    text-decoration: underline black;
+}
+h3 {
+    color: darkolivegreen;
+}
+body {
+    background-image: url("https://unsplash.com/photos/y1qOT82fd8k");
+    background-color: lightgray;
+    background-repeat: repeat;
+    background-position-x: unset;
+    background-position-y: bottom;
+    background-blend-mode: unset;
+    font-family: "Roboto Light";
+    font-size: 20px;
+}
+ul, ol{
+    list-style: georgian;
+}
+table, tr, td {
+    border: 5px;
+    padding: 15px;
+    font-size medium;
+}
+a:link {
+    color:black;
+}
+a:visited {
+    color:green;
+}
+a:hover {
+    color:darkgreen;
+}
+a:active {
+    color:black;
+}
+
+
+
+
