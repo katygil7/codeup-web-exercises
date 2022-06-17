@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register With Us</title>
-</head>
-<body>
-<form method="POST" action="https://request-inspector.glitch.me/">
-    <label for="username">Username</label>
-        <input type="text" name="username" id="username" placeholder="Input a username">
-    <br>
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password" placeholder="Input a password">
-    <br><br>
-    <label>Bio</label>
-    <label>
-    <textarea name="Bio" placeholder="Briefly tell us about yourself"></textarea>
-    </label><br><br>
-    <label for="1">How did you hear about us?</label><br><br>
-    <label>
-            <input type="radio" name="1" value="Radio"> Radio <br>
-    </label>
-    <label>
-        <input type="radio" name="1" value="Radio Advertisement">Radio Advertisement<br>
-    </label>
-    <label>
-        <input type="radio" name="1" value="Internet Advertisement">Internet Advertisement<br>
-    </label>
-    <label>
-        <input type="radio" name="1" value="Other">Other
-    </label>
-    <br><br>
-    <label>What browser do you have?</label><br>
-    <label>
-        <select name="web browser">
-            <option value="safari">Safari</option>
-            <option value="safari">Chrome</option>
-            <option value="Firefox">Firefox</option>
-        </select>
-    </label><br><br>
-    <label>
-        <input type="button" value="Submit">
-    </label>
-</form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Register With Us</title>
+    </head>
+    <body>
+    <form method="POST" action="https://request-inspector.glitch.me/" id="myForm">
+        <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Input a username"><br>
+        <br>
+        <label for="password">Password</label>
+
+        <input id="password" name="password" type="password" placeholder="Input a password">
+        <br>
+
+        <h4>Bio</h4>
+        <label>
+        <textarea id="bio" name="bio" type="textarea" form="myForm"  rows="10" cols="10" placeholder="Briefly tell us about yourself"></textarea>
+        </label><br>
+
+        <h4>How did you hear about us?</h4>
+
+        <label>
+                <input type="radio" name="1" value="Radio"> Radio <br>
+        </label>
+        <label>
+            <input type="radio" name="1" value="Radio Advertisement">Radio Advertisement<br>
+        </label>
+        <label>
+            <input type="radio" name="1" value="Internet Advertisement">Internet Advertisement<br>
+        </label>
+        <label>
+            <input type="radio" name="1" value="Other">Other
+        </label>
+        <br><br>
+        <label>What browser do you have?</label><br>
+
+            <select name="web browser">
+                <option value="safari">Safari</option>
+                <option value="safari">Chrome</option>
+                <option value="Firefox">Firefox</option>
+            </select>
+        <br><br>
+
+            <input type="Submit">
+    </form>
+    </body>
 </html>
