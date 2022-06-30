@@ -50,53 +50,44 @@
         <h2 class="pt-3 pb-3 text-center w-100" style="background-color: rgba(255,255,255,0.8); ">Welcome to Pizza
             World!</h2>
     </div>
+
     <h2>Build your own pizza!</h2>
-     Nav tabs
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="size-and-crust-tab" data-bs-toggle="tab" data-bs-target="#size-and-crust" type="button" role="tab" aria-controls="size-and-crust" aria-selected="false"><span class="badge bg-secondary">1</span>Sauce and crust</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Cheese-and-sauce-tab" data-bs-toggle="tab" data-bs-target="#Cheese-and-sauce" type="button" role="tab" aria-controls="Cheese-and-sauce" aria-selected="false"><span class="badge bg-secondary">2</span>Cheese and sauce</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings" type="button" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge bg-secondary">3</span>Toppings</button>
-        </li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div class="tab-pane active" id="Size and crust" role="tabpanel" aria-labelledby="Size and crust-tab">
-            <div id="outer-card" class="card">
-                <div class="card-body">
-                    <div class="card-header text-white bg-primary">Choose size and crust</div>
-                </div>
-                <div id="inner-card" class="card">
-                    <div class="card-body">
-                        <div class="card-header text-dark bg-light mb-2">Hand Tossed</div>
-                        <div class="card" style="width: auto;">
-                            <ul class="list-group">
-                                <li class="list-group-item"> Garlic seasoned crust  with a rich, buttery taste</li>
-                                <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Small (10")</li>
 
-                                <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Medium (12")</li>
-
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Size and Crust</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Cheese and Sauce</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Toppings</button>
+            </li>
+        </ul>
+        <div class="card">
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="card-header text-white bg-primary">Choose size and crust</div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header">Hand Tossed</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
                             </ul>
                         </div>
                     </div>
-                    <div id="inner-card2" class="card">
-                        <div class="card-body">
-                            <div class="card-header text-dark bg-light mb-2">Crispy Thin</div>
-                            <div class="card" style="width: auto;">
-                                <ul class="list-group">
-                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio  </li>
-                                    <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Medium (12")</li>
 
-                                    <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Large (14")</li>
 
-                                </ul>
 
-                            </div>
-                        </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                </div>
+            </div>
+        </div>
+
+
+
 
 
 
@@ -105,13 +96,7 @@
 </html>
 
 
-<!--<nav>-->
-<!--    <div class="nav nav-tabs" id="nav-tab" role="tablist">-->
-<!--        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Size and Crust</button>-->
-<!--        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>-->
-<!--        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>-->
-<!--    </div>-->
-<!--</nav>-->
+
 <!--<div class="card" style="width: auto;">-->
 <!--    <div class="card-header">-->
 <!--        Choose size and crust-->
@@ -158,3 +143,56 @@
 <!--</div>-->
 
 <!--</div>-->
+
+<!--sdjbnfjdsbf,jbds,jfb,sjdbfs
+<!--<ul class="nav nav-tabs" id="myTab" role="tablist">-->
+<!--        <li class="nav-item" role="presentation">-->
+<!--            <button class="nav-link" id="size-and-crust-tab" data-bs-toggle="tab" data-bs-target="#size-and-crust" type="button" role="tab" aria-controls="size-and-crust" aria-selected="false"><span class="badge bg-secondary">1</span>Sauce and crust</button>-->
+<!--        </li>-->
+<!--        <li class="nav-item" role="presentation">-->
+<!--            <button class="nav-link" id="Cheese-and-sauce-tab" data-bs-toggle="tab" data-bs-target="#Cheese-and-sauce" type="button" role="tab" aria-controls="Cheese-and-sauce" aria-selected="false"><span class="badge bg-secondary">2</span>Cheese and sauce</button>-->
+<!--        </li>-->
+<!--        <li class="nav-item" role="presentation">-->
+<!--            <button class="nav-link" id="Toppings-tab" data-bs-toggle="tab" data-bs-target="#toppings" type="button" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge bg-secondary">3</span>Toppings</button>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    &lt;!&ndash; Tab panes &ndash;&gt;-->
+<!--<div class="tab-content">-->
+<!--    <div class="tab-pane active" id="Size and crust" role="tabpanel" aria-labelledby="Size and crust-tab">-->
+<!--        <div id="outer-card" class="card">-->
+<!--            <div class="card-body">-->
+<!--                <div class="card-header text-white bg-primary">Choose size and crust</div>-->
+<!--            </div>-->
+<!--            <div id="inner-card" class="card">-->
+<!--                <div class="card-body">-->
+<!--                    <div class="card-header text-dark bg-light mb-2">Hand Tossed</div>-->
+<!--                    <div class="card" style="width: auto;">-->
+<!--                        <ul class="list-group">-->
+<!--                            <li class="list-group-item"> Garlic seasoned crust  with a rich, buttery taste</li>-->
+<!--                            <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Small (10")</li>-->
+
+<!--                            <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Medium (12")</li>-->
+
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div id="inner-card2" class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-header text-dark bg-light mb-2">Crispy Thin</div>-->
+<!--                        <div class="card" style="width: auto;">-->
+<!--                            <ul class="list-group">-->
+<!--                                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio  </li>-->
+<!--                                <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Medium (12")</li>-->
+
+<!--                                <li class="list-group-item"><input class="form-check-input mt-1 me-md-2" type="radio" value="" aria-label="Radio button for following text input">Large (14")</li>-->
+
+<!--                            </ul>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--&ndash;&gt;-->

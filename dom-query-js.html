@@ -5,6 +5,11 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<!--button#btn$*3 TAB-->
+<button id="btn1">Change Header</button>
+<button id="btn2">Change Sub-header to Blue</button>
+<button id="btn3">List-Items to Grey</button>
+<button id="btn4">Change Paragraph</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -28,33 +33,63 @@
 <script>
     (function() {
         "use strict";
+        //Buttons--------------
+        //button1
+        let buttonOne = function (){
+            mainHeader.innerHTML = "JavaScript is Cool"
+        }
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click",buttonOne);
+        //button2
+        let buttonTwo = function (){
+            subHeader.style.color = "#0000FF";
+        }
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click",buttonTwo);
+        //button 3
+
+        let buttonThree = function (){
+            for (let i = 0; i < listItems.length; i++) {
+                if ( i % 2 === 0){
+                    listItems[i].style.color = "grey";
+                }
+            }
+        }
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click",buttonThree);
+        //button Four
+        let buttonFour = function (){
+            subParagraphs[0].innerHTML = "Mission Accomplished!"
+        }
+        let btn4 = document.getElementById("btn4");
+        btn4.addEventListener("click",buttonFour);
+
         // TODO: Uncomment next line and get the main header element by id
         let mainHeader = document.getElementById("main-header");
         console.log(mainHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool"
-        console.log(mainHeader.innerHTML);
+        // mainHeader.innerHTML = "JavaScript is Cool"
+        // console.log(mainHeader.innerHTML);
 
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById("sub-header");
         console.log(subHeader);
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "#0000FF";
+        // subHeader.style.color = "#0000FF";
 
         // TODO: Uncomment the next line and get all list items
          let listItems = document.getElementsByTagName("li") ;
          console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            if ( i % 2 === 0){
-                listItems[i].style.color = "grey";
-            }
-        }
+        // for (let i = 0; i < listItems.length; i++) {
+        //     if ( i % 2 === 0){
+        //         listItems[i].style.color = "grey";
+        //     }
+        // }
 
-        // listItems.style.color = "#444"; finish tomorro
         // TODO: Set text color of li with data-dbid = 1 to blue
         let item1 = document.getElementsByTagName('li')[0];
         item1.style.color = "blue";
@@ -64,8 +99,8 @@
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
-        console.log(subParagraphs.innerHTML);
+        // subParagraphs[0].innerHTML = "Mission Accomplished!"
+        // console.log(subParagraphs.innerHTML);
     //
     })();
 </script>
