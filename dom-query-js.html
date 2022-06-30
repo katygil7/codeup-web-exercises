@@ -42,25 +42,31 @@
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = "#0000FF";
-        console.log(subHeader.style.color);
 
         // TODO: Uncomment the next line and get all list items
          let listItems = document.getElementsByTagName("li") ;
          console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
+        for (let i = 0; i < listItems.length; i++) {
+            if ( i % 2 === 0){
+                listItems[i].style.color = "grey";
+            }
+        }
 
-
-        // listItems.style.color = "#444";
+        // listItems.style.color = "#444"; finish tomorro
         // TODO: Set text color of li with data-dbid = 1 to blue
+        let item1 = document.getElementsByTagName('li')[0];
+        item1.style.color = "blue";
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.getElementsByClassName("sub-paragraph");
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerHTML = "Mission Accomplished!"
+        subParagraphs[0].innerHTML = "Mission Accomplished!"
         console.log(subParagraphs.innerHTML);
+    //
     })();
 </script>
 </body>
