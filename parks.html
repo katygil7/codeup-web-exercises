@@ -8,15 +8,60 @@
             visibility: hidden;
             /*display: none;*/
         }
+
+        .mainHeader{
+            grid-area: main;
+            text-align: center;
+        }
+        .subHeader{
+            grid-area: sub;
+            text-align: center;
+        }
+        .first-park{
+            grid-area: park1;
+        }
+        .second-park{
+            grid-area: park2;
+        }
+        .third-park{
+            grid-area: park3;
+        }
+
         .green-background {
             background-color: green;
+        }
+        .firstB{
+            grid-area: button1;
+            text-align: end;
+        }
+        .secondB{
+            grid-area: button2;
+            text-align: start;
+        }
+        .parkFacts{
+            grid-area: factsP;
+        }
+        .container{
+            display: grid;
+            margin: 1em;
+            grid-template-areas:
+                'main sub'
+                'factsP park1'
+                'factsP park2'
+                'factsP park3'
+                'firstB secondB';
         }
     </style>
 </head>
 <body>
-<h1>National Parks FAQ</h1>
-<h1>Parks List</h1>
-<div id="firstNationalPark-div">
+<div class="container">
+    <header class="mainHeader">
+        <h1>National Parks FAQ</h1>
+    </header>
+    <header class="subHeader">
+        <h1>Parks List</h1>
+    </header>
+    <div id="firstNationalPark-div" class="first-park">
     <h3 id="nationalPark-heading1"> 1) Great Smoky Mountains National Park</h3>
     <ul class="list-of-parks">
         <li>No entrance fee to the national park.</li>
@@ -24,8 +69,8 @@
         <li>Some of the oldest mountains in the world.</li>
         <li>More than 800 miles of hiking trails.</li>
     </ul>
-</div>
-<div id="secondNationalPark-div">
+    </div>
+<div id="secondNationalPark-div" class="second-park">
     <h3 id="nationalPark-heading2"> 2) Grand Canyon National Park</h3>
     <ul class="list-of-parks">
         <li>Grand Canyon National Park is bigger than the entire state of Rhode Island.</li>
@@ -34,7 +79,7 @@
         <li>The canyon is home to pink snakes</li>
     </ul>
 </div>
-<div id="thirdNationalPark-div">
+<div id="thirdNationalPark-div" class="third-park">
     <h3 id="nationalPark-heading3">3) Yosemite National Park</h3>
     <ul class="list-of-parks">
         <li>Park is located in central California.</li>
@@ -43,32 +88,38 @@
         <li>Yosemite National Park’s camping grounds can accommodate over 9,000 people.</li>
     </ul>
 </div>
-
-<button id="btn1">Change last li color</button>
-<dl>
-    <dt>How many people visit the national parks?</dt>
-    <dd class="invisible">Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
-    <dt>How old is the National Park System?</dt>
-    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
-    <dt>How many employees are in the National Park Service?</dt>
-    <dd class="invisible">Permanent, temporary, and seasonal employees: More than 20,000</dd>
-    <dt>What is the origin of the National Park Service arrowhead?</dt>
-    <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951.</dd>
-    <dt>How many areas are in the National Park System?</dt>
-    <dd class="invisible">The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands.</dd>
-    <dt>What is the largest national park site?</dt>
-    <dd class="invisible">Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
-    <dt>What is the National Park Service budget?</dt>
-    <dd class="invisible">Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
-    <dt>Can I bring my pet to a national park?</dt>
-    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
-    <dt>How do I apply for a job with the National Park Service?</dt>
-    <dd class="invisible">National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
-    <dt>What do I need to know about driving off road in national parks?</dt>
-    <dd class="invisible">Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
-</dl>
+    <div class="parkFacts">
+        <dl>
+            <dt>How many people visit the national parks?</dt>
+            <dd class="invisible">Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+            <dt>How old is the National Park System?</dt>
+            <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+            <dt>How many employees are in the National Park Service?</dt>
+            <dd class="invisible">Permanent, temporary, and seasonal employees: More than 20,000</dd>
+            <dt>What is the origin of the National Park Service arrowhead?</dt>
+            <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951.</dd>
+            <dt>How many areas are in the National Park System?</dt>
+            <dd class="invisible">The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands.</dd>
+            <dt>What is the largest national park site?</dt>
+            <dd class="invisible">Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+            <dt>What is the National Park Service budget?</dt>
+            <dd class="invisible">Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
+            <dt>Can I bring my pet to a national park?</dt>
+            <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
+            <dt>How do I apply for a job with the National Park Service?</dt>
+            <dd class="invisible">National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
+            <dt>What do I need to know about driving off road in national parks?</dt>
+            <dd class="invisible">Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+        </dl>
+    </div>
+</div>
 <!--<a id="inviso-toggle" href="">Toggle Visibility</a>-->
-<button id="inviso-toggle">Toggle Visibility</button>
+<footer class="firstB">
+    <button id="btn1" class="btn11">Change last li color</button>
+</footer>
+<footer class="secondB">
+    <button id="inviso-toggle" class="btn22">Toggle Visibility</button>
+</footer>
 <script>
     //Exercise #2 parks
     function f1(){
