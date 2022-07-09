@@ -53,21 +53,41 @@
             // problem #1
             // make the h1 with the id of "h1-1" say "Hello World!"
             // 1. get a JS variable that targets the h1 using getElementById or querySelector
+            const hOne = document.querySelector("#h1-1");
             // 2. change its text using
+            hOne.innerHTML = "Hello World!"
+
+            // code below is for if click on the word it chances.
+            // hOne.addEventListener("click",function (event){
+            //     this.classList.toggle("green-background");
+            //     put .green-background in styles put color: green
+            // this.innerHTML = "Hello World!"
+            //  another way is = hOne.innerHTML = "Hello World!"
+            // });
+
 
 
             // problem #2
             // when the button with id b1-2 is clicked and change the paragraph with id p1-2 text
             // to "The quick brown fox jumped over the lazy dog"
             // 1. create a click listener for the button and use an anonymous function
+            const changePButton = document.querySelector("#b1-2");
+            changePButton.addEventListener("click", function (event){
             // 2. in the anonymous function, get a variable for the p with id p1-2
-            // 3. set the p's innerText
+            const paraOne = document.querySelector("#p1-2");
+            paraOne.style.color = "red"
+            // 3. set the p's innerTex
+            paraOne.innerHTML = "The quick brown fox jumped over the lazy dog."
+            });
 
 
-            // problem #3
+            // problem #3  (* I solved this from Web... where for instructor to give me another way *)
             // change the anchor with id a1-3's href to "https://java.codeup.com"
             // 1. get a reference to the anchor
+            const anchorChange = document.createAttribute("href");
             // 2. use setAttribute on its href
+            anchorChange.value = "https://java.codeup.com";
+            document.querySelector("#a1-3").setAttributeNode(anchorChange);
 
             // problem #4
             // change the background of the body to green
