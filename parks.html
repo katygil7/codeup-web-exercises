@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Parks</title>
     <style>
+        body{
+            background-image: linear-gradient(to left bottom, #788f99, #8299a3, #8ba3ad, #95adb7, #9fb7c1, #9ab7be, #96b7b9, #94b7b3, #8eab98, #929c7d, #9b8a69, #a17762);
+            /*height: 100em;*/
+            width: auto;
+        }
         .invisible {
             visibility: hidden;
             /*display: none;*/
@@ -41,9 +46,11 @@
         .parkFacts{
             grid-area: factsP;
         }
-        .container{
+        .container {
             display: grid;
             margin: 1em;
+            height: auto;
+            width: auto;
             grid-template-areas:
                 'main sub'
                 'factsP park1'
