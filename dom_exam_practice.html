@@ -89,7 +89,7 @@
             // anchorChange.value = "https://java.codeup.com";
             // document.querySelector("#a1-3").setAttributeNode(anchorChange);
             const anchorChange = document.querySelector("#a1-3");
-            anchorChange.setAttribute("href", "https://java.codeup.com" )
+            anchorChange.setAttribute("href","https://java.codeup.com");
 
             // problem #4
             // change the background of the body to green
@@ -149,10 +149,16 @@
                 const paraSeven = document.querySelector("#p7");
                 paraSeven.innerHTML = inputValue;
             });
-
-
         });
-
+    // When any of the lis with class my-lis3 are clicked, make that li;s text blue
+    //    arrays doesn't get an event listener. so, a loop is required a loop for each lis. give each one that event listener
+    //     const myLIS3 = document.querySelectorAll(".my-li3");
+    //     // loop over the array of lis and add and event listener to each
+    //     for (let i = 0; i < myLIS3.length; i++) {
+    //         myLIS3[i].addEventListener("click", function(event) {
+    //             this.style.color = "blue";
+    //         })
+    //     queryselectorall gives an array so you can add and event listener. you have to do a loop.
     })();
 </script>
 </body>
