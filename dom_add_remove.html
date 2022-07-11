@@ -57,6 +57,7 @@
     "use strict";
     (function() {
         document.addEventListener("DOMContentLoaded", function () {
+            let numTodos = 1;
 
             // add your code here
             const addButton = document.querySelector("#add-todo");
@@ -66,6 +67,18 @@
             function addTodo() {
                 const myInput = document.querySelector("#add-todo-text");
                 const toDoText = myInput.value;
+                if (toDoText.trim().length < 1){
+                    myInput.classList.add("is-invalid");
+                    return;
+                }else{
+                    myInput.classList.remove("is-invalid")
+                }
+                if (numTodos === 10) {
+                    console.log("go get some stuff done");
+                    return;
+                }
+
+                //to remove the invalid bootstrap refer to dom_add_remove long version for validation bootstrap
                 const myToDos = document.querySelector("#my-todos");
                 myToDos.innerHTML += `
                 <div class="card col-2">
@@ -77,6 +90,7 @@
                     </div>
                 </div>`;
                 addDeleteEventListerns();
+                numTodos ++;
             }
             //Connect all curretn delete buttons to the deleteTodo function
             function addDeleteEventListerns(){
@@ -84,15 +98,14 @@
                 //this return an array of buttons
                 for (let i = 0; i < deleteButton.length; i++) {
                     deleteButton[i].addEventListener("click", deleteTodo);
-
                 }
             }
             function deleteTodo(event) {
-                // console.log("delete something") testing of it works
-
+                // console.log("delete something");
+                this.parentElement.parentElement.remove();
             }
             addDeleteEventListerns();
-
+            numTodos --;
         });
     })();
 </script>
