@@ -84,17 +84,27 @@
             // problem #3  (* I solved this from Web... where for instructor to give me another way *)
             // change the anchor with id a1-3's href to "https://java.codeup.com"
             // 1. get a reference to the anchor
-            const anchorChange = document.createAttribute("href");
+            // const anchorChange = document.createAttribute("href");
             // 2. use setAttribute on its href
-            anchorChange.value = "https://java.codeup.com";
-            document.querySelector("#a1-3").setAttributeNode(anchorChange);
+            // anchorChange.value = "https://java.codeup.com";
+            // document.querySelector("#a1-3").setAttributeNode(anchorChange);
+            const anchorChange = document.querySelector("#a1-3");
+            anchorChange.setAttribute("href", "https://java.codeup.com" )
 
             // problem #4
             // change the background of the body to green
             // 1. get a reference to the body
             const bodyPage = document.querySelector("body");
             // 2. set backgroundColor property of its style property to "green"
-            bodyPage.style.backgroundColor = "green"
+            bodyPage.addEventListener("click",function (event){
+                this.style.backgroundColor = "green"
+                // if(this.style.backgroundColor === "green"){
+                //     this.style.backgroundColor = "";
+                // } else{
+                //     this.style.backgroundColor = "green"
+                // }
+            //   if statement to add a toggle without a class. Empty "" means to clear out something.
+            });
 
 
             // problem #5
@@ -109,22 +119,36 @@
                 hOneAgain.classList.toggle("hotpinkText");
             });
 
-
+            // when paragraph p6 is hovered over, add a 5 px red border to it
+            //when paragraph p6 hovring stops, remove the border
             // problem 6: add 5px red border to paragraph with id p6 when you hover over it
             // and remove the border when you stop hovering over it
             // you can use the red-border class to make this a little easier
-            // 1. make event handlers for mouseenter and mouseleave for paragraph p4
+            // 1. make event handlers for mouseenter and mouseleave for paragraph p6
+            const paraFour = document.querySelector("#p6");
+            paraFour.addEventListener("mouseenter", function (event){
+                paraFour.classList.add("red-border");
+            });
+            paraFour.addEventListener("mouseleave", function (event){
+                paraFour.classList.remove("red-border");
+            });
             // 2. use style property on p6 (or use the this keyword) and set border to "5px solid red"
             //      you could also add or toggle the class "red-border"
 
 
-            // problem 7: when the user types in the text input with id "input7"
+
+            // problem 7: when the user types in the text input with id "text7"
             // , copy what was typed into the paragraph with id p7
-            // 1. get a reference to the text field with id input7
+            // 1. get a reference to the text field with id text7
             // 2. add a key event listener to the text field
             // 3. inside the event listener, get a reference to the paragraph p7
             // 4. set the paragraph's text to the input's VALUE property
-
+            const textSeven = document.querySelector("#text7");
+            textSeven.addEventListener("keyup", function (event){
+                const inputValue = textSeven.value;
+                const paraSeven = document.querySelector("#p7");
+                paraSeven.innerHTML = inputValue;
+            });
 
 
         });
