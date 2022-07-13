@@ -2,7 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My First Blog</title>
+<style>
+    html {
+        background-color: #000000;
+        background-image: linear-gradient(to right, #c0b78a, #cac199, #d4cca9, #ddd6b9, #e7e1c9);
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+    body{
+        margin: 30px;
+    }
+    .title{
+        font-family: AppleSystemUIFont;
+        text-decoration: underline;
+        letter-spacing: 2px;
+        marquee: horizantal;
+        color: #334125;
+    }
+    .para{
+        border-radius: 15px;
+        padding: 20px;
+        background-color: rgba(231, 246, 209, 0.2);
+        font-family: AppleSystemUIFont;
+        word-spacing: 2px;
+
+
+
+    }
+    .cate{
+        margin: 20px;
+        color: #3C563A;
+        font-family: AppleSystemUIFont;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+    }
+    .dates{
+        text-align: end;
+        font-family: AppleSystemUIFont;
+        letter-spacing: 1px;
+
+    }
+
+</style>
+
 </head>
 <body>
 <div id="posts">
@@ -18,10 +62,10 @@
         const getData = document.querySelector("#posts");
         for (let i = 0; i < dataBlog.length; i++) {
             getData.innerHTML += `<div>
-<h1>${dataBlog[i].title}</h1>
-<p>${dataBlog[i].content}</p>
-<h4>${dataBlog[i].categories.join(", ")}</h4>
-<h6>${dataBlog[i].date}</h6>
+<h1 class="title">${dataBlog[i].title}</h1>
+<p class="para">${dataBlog[i].content}</p>
+<h4 class="cate">${dataBlog[i].categories.join(", ")}</h4>
+<h6 class="dates">${dataBlog[i].date}</h6>
 </div>`
         }
 })();
