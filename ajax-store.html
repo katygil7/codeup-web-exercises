@@ -25,35 +25,46 @@
     (async function() {
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-        async function getToolsData (){
-            const response = await fetch("../data/inventory.json");
-            return response.json();
-            // console.log(coolTool);
-        }
-        getToolsData().then(function (data){
-            const inventory = data;
-            const insertTools = document.querySelector("#insertProducts");
-            for (let i = 0; i < inventory.length; i++) {
-                insertTools.innerHTML += `<tr>
-        <td>${inventory[i].title}</td>
-        <td>${inventory[i].quantity}</td>
-        <td>$${inventory[i].price}</td>
-        <td>${inventory[i].categories.join(", ")}</td>
-    </tr>`
+            async function getToolsData (){
+                const response = await fetch("../data/inventory.json");
+                return response.json();
+                // console.log(coolTool);
             }
-            // console.log(toolStats);
-        });
-
-
+            getToolsData().then(function (data){
+                const inventory = data;
+                const insertTools = document.querySelector("#insertProducts");
+                for (let i = 0; i < inventory.length; i++) {
+                    insertTools.innerHTML += `<tr>
+            <td>${inventory[i].title}</td>
+            <td>${inventory[i].quantity}</td>
+            <td>$${inventory[i].price}</td>
+            <td>${inventory[i].categories.join(", ")}</td>
+        </tr>`
+                }
+                // console.log(toolStats);
+            });
 
 
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
-
-
-    })();
+        //*****docrob solution:
+        // const tools = await fetch("data/inventory.json")
+        //     .then(function (response) {
+        //         if (response.status !== 200) {
+        //             console.log("error, cannot fetch data");
+        //             return [];
+        //         }
+        //         return response.json();
+        //     }).then(function (data) {
+        //         return data;
+        //     })
+        // console.log("tools")
+        // add a table row per tool
+        // example above with the loop
+        //
+})();
 </script>
 
 </body>
