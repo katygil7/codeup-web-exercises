@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="posts">
+
+</div>
+
+
+
+<script>
+    (async function myBlog() {
+        const response = await fetch("../data/blog.json");
+        const dataBlog = await response.json();
+        const getData = document.querySelector("#posts");
+        for (let i = 0; i < dataBlog.length; i++) {
+            getData.innerHTML += `<div>
+<h1>${dataBlog[i].title}</h1>
+<p>${dataBlog[i].content}</p>
+<h4>${dataBlog[i].categories.join(", ")}</h4>
+<h6>${dataBlog[i].date}</h6>
+</div>`
+        }
+})();
+</script>
+</body>
+</html>
