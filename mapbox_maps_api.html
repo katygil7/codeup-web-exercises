@@ -8,30 +8,31 @@
     <!-- Custom CSS -->
     <style>
         html{
-            background-color: white;
+            background-color: black;
             background-image: url("img/adrien-olichon-9zhsq3o1k60-unsplash.jpg");
         }
         body{
-           margin: 30px;
+           margin: 50px;
         }
         #map {
             /* the width and height may be set to any size */
-            width: 100%;
+            width: auto;
             height: 500px;
             border-radius: 10px;
             opacity: 60%;
-            border: #c0b78a solid 3px;
+            border: #c5c2b4 solid 20px;
         }
         .title{
             color: #E2B659;
             font-family: sans-serif;
             text-align: center;
+            text-shadow: rgba(187, 149, 115, 0.6) 2px 2px;
         }
         .hrL{
-            margin-bottom: 30px;
-            margin-top: -20px;
-            width: 100%;
-            background-color: #E2B659;
+            border: 1px solid rgb(250, 250, 210);
+            margin-bottom: 15px;
+            margin-top: -15px;
+            width: 80%;
         }
         .button {
             background-color: transparent;
@@ -42,6 +43,7 @@
             margin: 20px;
             padding: 10px;
             width: auto;
+            text-shadow: rgba(187, 149, 115, 0.6) 1px 1px;
         }
         .button:hover{
             background-color: rgba(229, 190, 129, 0.99); /* Green */
@@ -91,11 +93,39 @@
         }
         let coordinates = await getLatLngFromAddress("El rodeo, NC");
         console.log(coordinates);
-        const raleighMarker = new mapboxgl.Marker();
+
+        //create object of restaurants
+
+        let restaurants = [
+            {
+                name: "Sushi Blues",
+                address: "Glenwood Ave, Raleigh, NC 27603",
+                fact: "Best sushi ever"
+
+            },
+            {
+                name: "Sushi Blues",
+                address: "424 E Six Forks Rd Suite 105, Raleigh, NC 27609",
+                fact: "Best Pho ever"
+            },
+            {
+                name: "Pool's",
+                address: "426 S McDowell St, Raleigh, NC 27601",
+                fact: "Best Pies ever"
+            }
+        ]
+        const myRestaurants = new mapboxgl.Marker();
+        // const raleighMarker = new mapboxgl.Marker();
         const raleighButton = document.querySelector("#marker");
             raleighButton.addEventListener("click", function (event){
-                raleighMarker.setLngLat(coordinates);
-                raleighMarker.addTo(map);
+                const myRestaurants = new mapboxgl.Marker();
+                for (const restaurant in restaurants) {
+                    myRestaurants.setLngLat(coordinates);
+                    myRestaurants.addTo(map)
+                    console.log(myRestaurants.name);
+                    // raleighMarker.setLngLat(coordinates);
+                    // raleighMarker.addTo(map);
+                }
             });
 
 
