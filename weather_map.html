@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map{
+            /* the width and height may be set to any size */
+            width: auto;
+            height: 500px;
+            border-radius: 10px;
+            opacity: 60%;
+            border: #c5c2b4 solid 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+    (async function(){
+       mapboxgl.accessToken = MY_MAPBOX_KEY;
+
+        function getLatLngFromAddress(address, token = MY_MAPBOX_KEY) {
+            const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
+            return fetch(`${url}${encodeURIComponent(address)}.json?access_token=${token}`)
+                .then(async function(res) {
+                    const data = await res.json();
+                    console.log(data.features);
+                    return data.features[0].center;
+                });
+        }
+
+        const barcelonaCoord = await getLatLngFromAddress("Barcelona, Spain");
+        console.log(barcelonaCoord);
+
+        let map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 10,
+            center: [2.177432, 41.382894]
+        });
+
+
+
+
+    })();
+
+</script>
+</body>
+</html>
