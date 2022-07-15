@@ -81,7 +81,7 @@
             zoom: 10,
             center: [-78.639099, 35.780398]
         });
-
+        //function below is to find coordinates using geocode
         function getLatLngFromAddress(address, token = MY_MAPBOX_KEY) {
             const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
             return fetch(`${url}${encodeURIComponent(address)}.json?access_token=${token}`)
@@ -91,64 +91,88 @@
                     return data.features[0].center;
                 });
         }
+        // end of geo code set up. Now make a variable to call the function above.
         let coordinates = await getLatLngFromAddress("El rodeo, NC");
         console.log(coordinates);
 
-        //create object of restaurants
+        //adding only el rodeo to the map. it is commented out because I added el rodeo to the array of restaurants below
+        // // const raleighMarker = new mapboxgl.Marker();
+        // const raleighButton = document.querySelector("#marker");
+        //     raleighButton.addEventListener("click", function (event){
+        //         const myRestaurants = new mapboxgl.Marker();
+        //         for (const restaurant in restaurants) {
+        //             myRestaurants.setLngLat(coordinates);
+        //             myRestaurants.addTo(map)
+        //             console.log(myRestaurants.name);
+        //             // raleighMarker.setLngLat(coordinates);
+        //             // raleighMarker.addTo(map);
+        //         }
+        //     });
 
-        let restaurants = [
-            {
-                name: "Sushi Blues",
-                address: "Glenwood Ave, Raleigh, NC 27603",
-                fact: "Best sushi ever"
-
-            },
-            {
-                name: "Sushi Blues",
-                address: "424 E Six Forks Rd Suite 105, Raleigh, NC 27609",
-                fact: "Best Pho ever"
-            },
-            {
-                name: "Pool's",
-                address: "426 S McDowell St, Raleigh, NC 27601",
-                fact: "Best Pies ever"
-            }
-        ]
-        const myRestaurants = new mapboxgl.Marker();
-        // const raleighMarker = new mapboxgl.Marker();
-        const raleighButton = document.querySelector("#marker");
-            raleighButton.addEventListener("click", function (event){
-                const myRestaurants = new mapboxgl.Marker();
-                for (const restaurant in restaurants) {
-                    myRestaurants.setLngLat(coordinates);
-                    myRestaurants.addTo(map)
-                    console.log(myRestaurants.name);
-                    // raleighMarker.setLngLat(coordinates);
-                    // raleighMarker.addTo(map);
-                }
-            });
-
-
+        //Zoom button
         const zoomIn = document.querySelector("#zoom-in");
         zoomIn.addEventListener("click", function (event){
             let currentZoom = map.getZoom();
             currentZoom++;
             map.setZoom(currentZoom);
         });
-            const popUp = new mapboxgl.Popup();
-        const popUpButton = document.querySelector("#pop-up");
-        popUpButton.addEventListener("click", function (event){
-            popUp.setLngLat([-78.636669, 35.77557]);
-            popUp.addTo(map);
-            popUp.setHTML("<h4>El Rodeo has the best SANGRIAS</h4>");
-            console.log(popUp);
-            // code if i want to tap the marker in order to display popup.
-            // let marker = new mapboxgl.Marker();
-            //
-            // marker.setPopup(popUp);
-            // marker.setLngLat([-78.636669, 35.77557]);
-            // marker.addTo(map);
+        //     const popUp = new mapboxgl.Popup();
+        // const popUpButton = document.querySelector("#pop-up");
+        // popUpButton.addEventListener("click", function (event){
+        //     popUp.setLngLat([-78.636669, 35.77557]);
+        //     popUp.addTo(map);
+        //     popUp.setHTML("<h4>El Rodeo has the best SANGRIAS</h4>");
+        //     console.log(popUp);
+        //     // code if i want to tap the marker in order to display popup.
+        //     // let marker = new mapboxgl.Marker();
+        //     //
+        //     // marker.setPopup(popUp);
+        //     // marker.setLngLat([-78.636669, 35.77557]);
+        //     // marker.addTo(map);
+        // });
+        //for coordinate 1 I am using the above for el rodeo
+        let coordinate2 = await getLatLngFromAddress("426 S McDowell St, Raleigh, NC 27601");
+        let coordinate3 = await getLatLngFromAddress("424 E Six Forks Rd Suite 105, Raleigh, NC 27609");
+        console.log(coordinate2);
+
+        let restaurantS = [];
+
+        const marker1 = new mapboxgl.Marker();
+        marker1.setLngLat(coordinates);
+        const popUp1 = new mapboxgl.Popup();
+        popUp1.setHTML("<h4>Best Sangrias in town</h4>");
+        marker1.setPopup(popUp1);
+        restaurantS.push(marker1);
+
+        const marker2 = new mapboxgl.Marker();
+        marker2.setLngLat(coordinate2);
+        const popUp2 = new mapboxgl.Popup();
+        popUp2.setHTML("<h4>Best Pies ever</h4>");
+        marker2.setPopup(popUp2);
+        restaurantS.push(marker2);
+
+        const marker3 = new mapboxgl.Marker();
+        marker3.setLngLat(coordinate3);
+        const popUp3 = new mapboxgl.Popup();
+        popUp3.setHTML("<h4>Best Pho in town</h4>")
+        marker3.setPopup(popUp3);
+        restaurantS.push(marker3)
+
+        const button123 = document.querySelector("#marker");
+        button123.addEventListener("click", function (event) {
+            restaurantS.forEach(function (marker) {
+                marker.addTo(map)
+            });
         });
+
+
+
+
+
+
+
+
+
 
 
 
