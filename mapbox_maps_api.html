@@ -61,9 +61,9 @@
 
 <div id='map'></div>
 <div class="divButtons">
-<button id="marker" class="button">El Rodeo Location</button>
+<button id="marker" class="button">My Favorite Restaurants</button>
 <button id="zoom-in" class="button">Zoom In</button>
-<button id="pop-up" class="button"> Click to Read Message</button>
+<button id="re-center" class="button">Zoom Out</button>
 </div>
 
 <script src="js/keys.js"></script>
@@ -115,6 +115,12 @@
             let currentZoom = map.getZoom();
             currentZoom++;
             map.setZoom(currentZoom);
+        });
+        const recenter = document.querySelector("#re-center");
+        recenter.addEventListener("click",function (event){
+            currrentZoom = map.getZoom();
+            currrentZoom--;
+           map.setZoom(currrentZoom);
         });
         //     const popUp = new mapboxgl.Popup();
         // const popUpButton = document.querySelector("#pop-up");
