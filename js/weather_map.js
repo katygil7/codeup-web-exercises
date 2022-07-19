@@ -4,6 +4,7 @@
     const name = document.querySelectorAll(".name");
     const desc = document.querySelectorAll(".description");
     const temp = document.querySelectorAll(".temp");
+    // const icon = document.querySelectorAll("#icon").src = "http://openweathermap.org/img/w/"+weather[0].icon+".png";
     let longitude = 2.177432;
     let latitude = 41.382894;
     const weatherAPI = MY_OPEN_WEATHER_KEY;
@@ -59,4 +60,3 @@
         }
 
 })();
-//figure out the key problem
