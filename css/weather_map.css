@@ -1,0 +1,45 @@
+#map{
+    /* the width and height may be set to any size */
+    width: auto;
+    height: 50vh;
+    border-radius: 10px;
+    opacity: 60%;
+    border: #c5c2b4 solid 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+.input{
+    text-align: center;
+    margin: 100px 0;
+}
+.inputValue{
+    height: 50px;
+    width: 600px;
+    background: #d4cca9;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 10px;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    text-align: center;
+
+}
+.display{
+    background-color: #d4cca9;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+
+}

@@ -4,53 +4,53 @@
     <meta charset="UTF-8">
     <title>Weather Map</title>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        #map{
-            /* the width and height may be set to any size */
-            width: auto;
-            height: 500px;
-            border-radius: 10px;
-            opacity: 60%;
-            border: #c5c2b4 solid 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/weather_map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<div id='map'></div>
+<div class="input">
+    <input type="text" class="inputValue" placeholder="Search">
+    <input type="submit" value="Submit" class="button">
+</div>
+<div class="container">
+<div class="display">
+    <h2 class="name"></h2>
+    <p class="description"></p>
+    <p class="temp"></p>
+</div>
+<div class="display">
+    <h2 class="name"></h2>
+    <p class="description"></p>
+    <p class="temp"></p>
+</div>
+<div class="display">
+    <h2 class="name"></h2>
+    <p class="description"></p>
+    <p class="temp"></p>
+</div>
+<div class="display">
+    <h2 class="name"></h2>
+    <p class="description"></p>
+    <p class="temp"></p>
+</div>
+<div class="display">
+    <h2 class="name"></h2>
+    <p class="description"></p>
+    <p class="temp"></p>
+</div>
+</div>
 
+<div class="card-map">
+        <div id='map'></div>
+</div>
 
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
-<script>
-    (async function(){
-       mapboxgl.accessToken = MY_MAPBOX_KEY;
-
-        function getLatLngFromAddress(address, token = MY_MAPBOX_KEY) {
-            const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
-            return fetch(`${url}${encodeURIComponent(address)}.json?access_token=${token}`)
-                .then(async function(res) {
-                    const data = await res.json();
-                    console.log(data.features);
-                    return data.features[0].center;
-                });
-        }
-
-        const barcelonaCoord = await getLatLngFromAddress("Barcelona, Spain");
-        console.log(barcelonaCoord);
-
-        let map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            zoom: 10,
-            center: [2.177432, 41.382894]
-        });
-
-
-
-
-    })();
-
-</script>
+<script src="js/weather_map.js"></script>
 </body>
 </html>
+<!--60°C-->
