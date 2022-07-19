@@ -13,7 +13,8 @@
 }
 body{
     font-family: 'Edu NSW ACT Foundation', cursive;
-    background-color: rgba(199, 203, 191, 0.72);
+    background-image: url("../img/david-marcu-78A265wPiO4-unsplash (1).jpg");
+    background-size: cover;
 }
 h1{
     text-align: center;
@@ -29,7 +30,7 @@ h1{
     margin: 40px 0;
 }
 .inputValue{
-    background-color: rgba(161, 161, 103, 0.4);
+    background-color: rgba(161, 161, 103, 0.77);
     width: 400px;
     border-radius: 10px;
     font-family: font-family: 'Edu NSW ACT Foundation', cursive;
@@ -57,7 +58,7 @@ h1{
 }
 
 .button {
-    background-color: rgba(161, 161, 103, 0.4);
+    background-color: rgba(161, 161, 103, 0.77);
     border-radius: 10px;
     font-family: 'Edu NSW ACT Foundation', cursive;
     text-align: center;
