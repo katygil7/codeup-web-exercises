@@ -3,4 +3,8 @@
 .DS_Store
 NOTES
 keys.js
+private_constants.js
+config.js
+application.properties
+.env
 
