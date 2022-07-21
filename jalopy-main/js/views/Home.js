@@ -10,7 +10,8 @@ export default function Home(props) {
         </header>
         <main>
             <div>
-                <img src="../../assets/jalopy1.jpeg">
+                <img src="assets/jalopy1.jpeg" class="img1">
+                <button class="button"
                 <p>
                     This is the home page text.
                 </p>    
@@ -19,12 +20,30 @@ export default function Home(props) {
     `;
 }
 
-export function HomeEvents() {
-    // const authority = getUserRole();
-    const user = getUser();
-    if(!user) {
-        showNotification("Welcome visitor", "secondary");
-    } else {
-        showNotification("Welcome " + user.userName, "info");
-    }
+// export function HomeEvents() {
+//     // const authority = getUserRole();
+//     const user = getUser();
+//     if(!user) {
+//         showNotification("Welcome visitor", "secondary");
+//     } else {
+//         showNotification("Welcome " + user.userName, "info");
+//     }
+// }
+const imagePaths = [
+    "assets/jalopy1.jpeg",
+    "assets/jalopy2.jpeg",
+    "assets/jalopy3.jpeg"
+]
+let currentImageIndex = 1;
+
+export function HomeEvents (){
+    const button = document.querySelector(".button");
+    button.addEventListener("click", function (event){
+        const img = document.querySelector(".img1");
+        img.setAttribute("src", imagePaths[currentImageIndex]);
+        currentImageIndex++;
+        if (currentImageIndex === 3){
+            currentImageIndex = 0;
+        }
+    })
 }
