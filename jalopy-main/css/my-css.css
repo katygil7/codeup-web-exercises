@@ -57,4 +57,5 @@ body{
 .para1{
     color: #805151;
     text-shadow: 1px 1px #a16464;
+    letter-spacing: 1px;
 }
