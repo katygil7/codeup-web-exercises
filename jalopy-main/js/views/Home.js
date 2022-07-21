@@ -6,10 +6,11 @@ const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 export default function Home(props) {
     return `
         <header>
-            <h1>Home Page</h1>
+            <h1 id="title">Hello Jalopy!</h1>
         </header>
         <main>
             <div>
+                <img src="../../assets/jalopy1.jpeg">
                 <p>
                     This is the home page text.
                 </p>    
@@ -19,7 +20,6 @@ export default function Home(props) {
 }
 
 export function HomeEvents() {
-    // TODO: use an enum for message type
     // const authority = getUserRole();
     const user = getUser();
     if(!user) {
