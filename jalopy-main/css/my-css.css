@@ -1,35 +1,60 @@
 body{
-    background-color: #848487;
+    background-color: rgba(138, 115, 78, 0.45);
 }
 #title{
     text-align: center;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+    text-shadow: 1px 1px rgba(84, 116, 53, 0.93);
+    color: #805151;
+    letter-spacing: 2px;
 }
 .img1{
     display: block;
-    height: 200px;
-    margin: 0 auto;
+    height: 250px;
+    width: 60vh;
+    margin: 20px auto;
+    border-radius: 20px;
+    opacity: 70%;
 
 }
 .button{
     display: inline-block;
-    padding: 0.35em 1.2em;
-    border: 0.1em solid #FFFFFF;
-    margin: 0 0.03em 0.03em 0;
-    border-radius: 0.12em;
+    padding: 0.35em 1em;
+    background-color: #788c57;
+    border: 0.1em solid #672d2d;
+    margin: 20px 0.1em 20px;
+    border-radius: 0.25em;
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Roboto Light", sans-serif;
-    font-weight: 300;
-    color: #9d5858;
+    font-weight: 500;
+    color: #805151;
     text-align: center;
     transition: all 0.2s;
+    vertical-align: center;
+    letter-spacing: 1px;
 }
 .button:hover{
-    color: #FFFFFF;
+    color: #de8b8b;
 }
 @media all and ( max-width: 30em) {
     .button{
         display: block;
         margin: 0.4em auto;
     }
+}
+.jalopy-nav{
+    color: #805151;
+    font-weight: 200;
+    text-decoration: underline rgba(84, 116, 53, 0.93);
+}
+.horizontalLIne{
+    margin: 0 25% 0 25%;
+    color: #b06d6d;
+}
+.para1{
+    color: #805151;
+    text-shadow: 1px 1px #a16464;
 }

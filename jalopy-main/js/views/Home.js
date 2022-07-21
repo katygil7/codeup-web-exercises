@@ -11,8 +11,9 @@ export default function Home(props) {
         <main>
             <div>
                 <img src="assets/jalopy1.jpeg" class="img1">
-                <button class="button"
-                <p>
+                <hr class="horizontalLIne">
+                <button class="button">search for Jalopy</button>
+                <p class="para1">
                     This is the home page text.
                 </p>    
             </div>
