@@ -1,4 +1,4 @@
-const quotes =[
+let quotes =[
     {
         quote: "War is organized murder and torture against our brothers.",
         author: "Alfred Adler"
@@ -39,7 +39,9 @@ const quotes =[
         author: "Lucy Liu"
     },
 ]
-export default function  () {
+export default function QuotesView (props) {
+    quotes = props.quotes
+    console.log(props);
     return `
 <div class="container-fluid">
 <h1 class="title">Quote of the Day</h1>

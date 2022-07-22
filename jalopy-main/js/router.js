@@ -31,10 +31,18 @@ export default function router(URI) {
             uri: '/dogs',
             title: 'Dog Facts',
             viewEvent: DogFactsEvents
-        },
+            },
         '/quotes': {
             returnView: QuotesView,
-            state:{},
+            state: {
+                quotes: {
+                    url: "https://dogfacts.fulgentcorp.com:12250/v1/quotes?random=true&limit=10",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': MY_QUOTES_API
+                    }
+                }
+            },
             uri:'/quotes',
             title: 'Dog Quotes',
             viewEvent:  QuotesEvents,
