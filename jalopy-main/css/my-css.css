@@ -1,5 +1,18 @@
+*{
+    margin: 30px;
+    padding: 0;
+}
 body{
     background-color: rgba(138, 115, 78, 0.45);
+}
+body::-webkit-scrollbar{
+    width: 1rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: #8a294f;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #06b95f;
 }
 .title{
     text-align: center;
@@ -67,12 +80,20 @@ body{
     color: #805151;
     text-shadow: 1px 1px #a16464;
     letter-spacing: 1px;
+    padding: 10px;
 }
 .card{
     background: none;
-    border: dashed saddlebrown;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.card-body{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }
 .paraQuote{
     color: #805151;
-    text-indent: 50px;
+    /*text-indent: 50px;*/
 }
