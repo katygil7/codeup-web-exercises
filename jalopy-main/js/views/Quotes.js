@@ -42,8 +42,12 @@ const quotes =[
 export default function  () {
     return `
 <div class="container">
-<h3>Dog Quotes</h3>
-<div id="paraGoesHere"></div>
+<h1 class="title">Dog Quotes</h1>
+    <div class="card"">
+        <div class="card-body">
+        <p id="paraGoesHere"></p>
+        </div>
+    </div>
 <button class="button" id="buttonQuotes">Search for a quote</button>
 </div>
     `
@@ -58,7 +62,7 @@ export function QuotesEvents () {
         btn.addEventListener("click", () => {
             let rnd = Math.floor(Math.random() * 10);
             console.log(rnd)
-                p.innerHTML = `<h1>${quotes[rnd].author}</h1>
-                                  <h3>${quotes[rnd].quote}</h3>`
+                p.innerHTML = `<h5 class="paraQuote">" ${quotes[rnd].quote}"</h5>
+                                 <h6 class="subTitle">- ${quotes[rnd].author}</h6>`
         });
     }
