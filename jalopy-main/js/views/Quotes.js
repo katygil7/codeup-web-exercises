@@ -41,7 +41,7 @@ let quotes =[
 ]
 export default function QuotesView (props) {
     quotes = props.quotes
-    console.log(props);
+    console.log(quotes);
     return `
 <div class="container-fluid">
 <h1 class="title">Quote of the Day</h1>
@@ -54,13 +54,18 @@ export default function QuotesView (props) {
 </div>
     `
 }
-export function QuotesEvents () {
+export function QuotesEvents (props) {
+
         const p = document.getElementById("paraGoesHere");
         const btn = document.getElementById("buttonQuotes");
+        let count = 0;
         btn.addEventListener("click", () => {
-            let rnd = Math.floor(Math.random() * 10);
-            console.log(rnd)
-            p.innerHTML = `<h5 class="paraQuote">" ${quotes[rnd].quote}"</h5>
-                           <h6 class="subTitle">- ${quotes[rnd].author}</h6>`
-        });
+            p.innerHTML = `<h4>${quotes[count].quote}</h4>
+                            <h6>${quotes[count].author}</h6>`
+            console.log(count)
+            count++;
+            if (count === 3){
+                count = 0;
+            }
+        })
 }
